@@ -10,6 +10,16 @@ def classify_message(message):
     else:
         return categories[3]
 
+def generate_response(category):
+    if category == "technical_issue":
+            print("Response:\nIt looks like you have a technical issue. Please check your device, browser, and any error message.")
+    elif category == "grading_dispute":
+        print("Response:\nIt looks like you have a grading concern. Please provide the course and assessment details so the instructor can review it.")
+    elif category == "enrollment_request":
+        print("Response:\nIt looks like you have an enrollment request. Please provide the course and section details.")
+    else:
+        print("Response:\nPlease provide more details about your question so I can help.")
+
 name = input("Enter you name: ")
 course = input("Enter your course: ")
 message = input("Enter your message: ")
@@ -30,15 +40,6 @@ Message:
 
 Category:
 {category}
-
 """
 print(Student_HelpDesk)
-
-if category == "technical_issue":
-    print("Response:\nIt looks like you have a technical issue. Please check your device, browser, and any error message.")
-elif category == "grading_dispute":
-    print("Response:\nIt looks like you have a grading concern. Please provide the course and assessment details so the instructor can review it.")
-elif category == "enrollment_request":
-    print("Response:\nIt looks like you have an enrollment request. Please provide the course and section details.")
-else:
-    print("Response:\nPlease provide more details about your question so I can help.")
+generate_response(category)
