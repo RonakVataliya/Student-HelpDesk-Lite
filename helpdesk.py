@@ -1,5 +1,3 @@
-from os import error
-from os import name
 def classify_message(message):
     categories = ["technical_issue", "grading_dispute", "enrollment_request", "general_question"]
     
@@ -30,7 +28,7 @@ Course: {course}
 Message:
 {message}
 
-Category: 
+Category:
 {category}
 
 """
